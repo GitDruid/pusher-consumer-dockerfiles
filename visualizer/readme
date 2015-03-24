@@ -1,0 +1,22 @@
+Build image:
+
+sudo docker build -t galassia/visualizer:2.0 .
+
+
+
+Run as:
+
+sudo docker run -d --name visualizer1 --link mongo1:mongo galassia/visualizer:2.0
+
+
+
+Run directly from jetty image as:
+
+sudo docker run -d --name visualizer1 -v "$PWD":/var/lib/jetty/webapps jetty:9.2.9
+
+
+
+Getting container IP address:
+
+sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' visualizer1
+

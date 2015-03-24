@@ -1,0 +1,4 @@
+Image run using:
+
+sudo docker run --name redis1 -d -p 6379:6379 redis:2.8.19
+

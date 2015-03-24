@@ -1,0 +1,4 @@
+Image run using:
+
+sudo docker run --name s3filesystem1 -d -p 4569:4569 lphoward/fake-s3
+

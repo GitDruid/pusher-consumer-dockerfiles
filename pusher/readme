@@ -1,0 +1,12 @@
+Image build using:
+
+sudo docker build -t galassia/pusher:2.0 .
+
+Image run using:
+
+sudo docker run --rm --link consumer1:consumer galassia/pusher:2.0 1 100 100
+
+or
+
+sudo docker run -d --name pusher1 --link consumer1:consumer galassia/pusher:2.0 1 100 100
+

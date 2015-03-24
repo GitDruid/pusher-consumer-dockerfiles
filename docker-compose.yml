@@ -1,0 +1,27 @@
+mongo: 
+  image: mongo:3.0.0
+  ports:
+    - "27017:27017"
+
+redis:
+  image: redis:2.8.19
+  ports:
+    - "6379:6379"
+
+s3filesystem:
+  image: lphoward/fake-s3
+  ports:
+    - "4569:4569"
+
+consumer:
+  image: galassia/consumer:2.0 
+  links:
+    - mongo     
+    - redis
+    - s3filesystem
+
+visualizer:
+  image: galassia/visualizer:2.0 
+  links:
+    - mongo     
+

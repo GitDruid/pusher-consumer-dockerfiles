@@ -1,0 +1,4 @@
+Image run using:
+
+sudo docker run --name mongo1 -d -p 27017:27017 mongo:3.0.0
+

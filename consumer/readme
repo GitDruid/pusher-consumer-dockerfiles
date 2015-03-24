@@ -1,0 +1,22 @@
+Build image:
+
+sudo docker build -t galassia/consumer:2.0 .
+
+
+
+Run as:
+
+sudo docker run -d --name consumer1 --link mongo1:mongo galassia/consumer:2.0
+
+
+
+Run directly from jetty image as:
+
+sudo docker run -d --name consumer1 -v "$PWD":/var/lib/jetty/webapps jetty:9.2.9
+
+
+
+Getting container IP address:
+
+sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' consumer1
+
